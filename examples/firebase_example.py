@@ -22,5 +22,5 @@ if __name__ == '__main__':
     def callback_get(response):
         with open('/dev/null', 'w') as f:
             f.write(response)
-    firebase.get_async('/users', snapshot['name'], callback=callback_get)
+    firebase.get('/users', snapshot['name'], callback=callback_get)
 
