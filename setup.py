@@ -6,7 +6,12 @@ try:
 except ImportError:
     from distutils.core import setup
 
-from firebase import __version__
+### I am having dependency issues here when deploying to Heroku
+### Hard coding for now
+__version__ = "1.1.1"
+
+#from firebase import __version__
+
 
 with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     long_description = readme.read()
